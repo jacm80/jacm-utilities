@@ -1,0 +1,7 @@
+{
+  "name": "jacm-utilities",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Juan Canepa <juan.canepa>",
+  "license": "MIT"
+}
