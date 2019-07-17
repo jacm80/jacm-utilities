@@ -1,7 +1,47 @@
 {
-  "name": "jacm-utilities",
+  "name": "@jacm/jacm-utilities",
   "version": "1.0.0",
-  "main": "index.js",
-  "author": "Juan Canepa <juan.canepa>",
-  "license": "MIT"
+  "description": "My test module for NPM",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.js",
+  "module": "dist/index.js",
+  "source": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "microbundle",
+    "prepublish": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "Juan Canepa <jacanepa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.4",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.0",
+    "install": "^0.13.0",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
+    "microbundle": "^0.11.0",
+    "prettier": "^1.18.2"
+  }
 }
