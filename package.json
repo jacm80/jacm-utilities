@@ -1,5 +1,5 @@
 {
-  "name": "@jacm/jacm-utilities",
+  "name": "@jacm/jacmutilities",
   "version": "1.0.0",
   "description": "My test module for NPM",
   "main": "dist/index.js",
